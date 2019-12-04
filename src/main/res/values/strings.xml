@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Lab1</string>
+    <string name="sign_in_button">Sign In</string>
+    <string name="sign_up_link">Link at Sign Up</string>
+    <string name="sign_up_button">Sign Up</string>
+    <string name="sign_in_link">Link at Sign In</string>
+    <string name="sign_out_button">Sign Out</string>
+
+    <string name="enter_name">Please enter name!</string>
+    <string name="enter_phone">Please enter phone!</string>
+    <string name="enter_email">Please enter your email!</string>
+    <string name="enter_password">Please enter password!</string>
+    <string name="enter_phone_valid">Phone must be 13 symbols, and starts with +380</string>
+    <string name="enter_email_valid">Invalid email!</string>
+    <string name="enter_password_valid">Password must be 8+ symbols!</string>
+    <string name="wrong">Something gone wrong!</string>
+    <string name="error">Error</string>
+
+    <string name="internet_no_connection">No Internet connection</string>
+    <string name="error_update">Update error</string>
+
+    <string name="value_hospitalBuilding">Hospital Building :</string>
+    <string name="value_ward">Ward :</string>
+    <string name="value_fullNamePatient">Name :</string>
+    <string name="value_pressure">Pressure :</string>
+    <string name="value_temperature">Temperature :</string>
+    <string name="value_palpitation">Palpitation :</string>
+</resources>

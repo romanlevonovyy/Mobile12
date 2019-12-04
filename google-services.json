@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "815236510624",
+    "firebase_url": "https://androidlab-d5015.firebaseio.com",
+    "project_id": "androidlab-d5015",
+    "storage_bucket": "androidlab-d5015.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815236510624:android:96dc256451db563d656ac5",
+        "android_client_info": {
+          "package_name": "com.example.lab1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815236510624-pi03imb61402ksbj6spqvqokif4p0gg3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoyIOIFwiNU0LIJrE27F2WULr4rC60zDo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815236510624-pi03imb61402ksbj6spqvqokif4p0gg3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
