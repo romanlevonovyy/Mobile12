@@ -45,17 +45,11 @@ public class DataListFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_main, container, false);
 
         setupViews(rootView);
-        checkConnection();
-        loadVendings();
+        loadFoodMachines();
         setSwipeToRefresh();
         return rootView;
     }
 
-    private void checkConnection() {
-        IntentFilter filter = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-        ConnectionChangeReceiver receiver = new ConnectionChangeReceiver(content);
-        Objects.requireNonNull(getActivity()).registerReceiver(receiver, filter);
-    }
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -69,7 +63,7 @@ public class DataListFragment extends Fragment {
 
     private void setSwipeToRefresh() {
         refreshLayout.setOnRefreshListener(() -> {
-            loadVendings();
+            loadFoodMachines();
             new Handler().postDelayed(() -> refreshLayout.setRefreshing(false), 0);
         });
     }
@@ -84,7 +78,7 @@ public class DataListFragment extends Fragment {
         mAuth = getApplicationEx().getAuth();
     }
 
-    private void loadVendings() {
+    public void loadFoodMachines() {
         progressBar.setVisibility(View.VISIBLE);
         final FoodMachineApi apiService = getApplicationEx().getFoodMachineApi();
         final Call<List<FoodMachine>> call = apiService.getFoodMachines();

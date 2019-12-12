@@ -1,15 +1,31 @@
 package com.dovhan.application.activities;
 
+import android.app.AlertDialog;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dovhan.application.R;
+import com.dovhan.application.adapters.ItemAdapter;
+import com.dovhan.application.api.FoodMachineApi;
+import com.dovhan.application.entities.FoodMachine;
+import com.dovhan.application.utils.ApplicationEx;
+import com.google.gson.Gson;
+import com.google.gson.JsonParser;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
 import com.squareup.picasso.Picasso;
 
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class ItemDetailsActivity extends AppCompatActivity {
     private static final int TARGET_WIDTH = 100;
@@ -37,13 +53,14 @@ public class ItemDetailsActivity extends AppCompatActivity {
             String vendingAddress = getIntent().getStringExtra("vending_address");
             String vendingCompany = getIntent().getStringExtra("vending_company");
             String imageName = getIntent().getStringExtra("vending_img_url");
+            String message = (getIntent().hasExtra("message")) ? getIntent().getStringExtra("message") : "No message";
 
-            setupFields(vendingName, vendingGoods, vendingAddress, vendingCompany, imageName);
+            setupFields(vendingName, vendingGoods, vendingAddress, vendingCompany, imageName, message);
         }
     }
 
     private void setupFields(String vendingName, String vendingGoods, String vendingAddress,
-                             String vendingCompany, String imageName) {
+                             String vendingCompany, String imageName, String message) {
         TextView name = findViewById(R.id.ven_name_detailed);
         TextView goods = findViewById(R.id.ven_goods_detailed);
         TextView address = findViewById(R.id.ven_address_detailed);
@@ -58,5 +75,17 @@ public class ItemDetailsActivity extends AppCompatActivity {
         goods.setText(vendingGoods);
         address.setText(vendingAddress);
         company.setText(vendingCompany);
+        showMessage(message);
+    }
+
+    private void showMessage(final String message) {
+        final TextView editText = new TextView(getApplicationContext());
+        AlertDialog dialog = new AlertDialog.Builder(getApplicationContext())
+                .setTitle("Received message")
+                .setMessage(message)
+                .setView(editText)
+                .setNegativeButton("Close", null)
+                .create();
+        dialog.show();
     }
 }

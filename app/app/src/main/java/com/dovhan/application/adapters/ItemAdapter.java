@@ -21,7 +21,7 @@ import java.util.List;
 
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
 
-    private final List<FoodMachine> foodMachines;
+    private List<FoodMachine> foodMachines;
     private Context mContext;
 
     public ItemAdapter(Context context, List<FoodMachine> foodMachines) {
