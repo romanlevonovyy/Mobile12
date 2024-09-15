@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "805379722959",
+    "firebase_url": "https://firstlab-7be63.firebaseio.com",
+    "project_id": "firstlab-7be63",
+    "storage_bucket": "firstlab-7be63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805379722959:android:207d0b86429dc01a7db1ba",
+        "android_client_info": {
+          "package_name": "com.vitalik.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805379722959-2eddfkvmuocpcbnidcg1j4hhct29ctp8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBgeZ7erBamq3GfrzKOuS9Oybngba81ACA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "805379722959-2eddfkvmuocpcbnidcg1j4hhct29ctp8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
